@@ -1,0 +1,641 @@
+
+<!DOCTYPE html> 
+<!--[if IE 7]> <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!-- <![endif]-->
+<head>
+<meta charset="utf-8" />
+
+<!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+www.tbs.gc.ca/ws-nw/wet-boew/terms / www.sct.gc.ca/ws-nw/wet-boew/conditions -->
+<meta name="dcterms.title" content="Historical Climate Data - Environment Canada" />
+<meta name="description" content="historical climate data web site is a gateway to information on matters such as past (hourly, daily, monthly and almanac) weather includes: temperature, snow, snow on ground, precipitation, rain, wind speed and direction, heating and cooling degree days, visibility, relative humidity, wind chill and humidex in Canada." />
+<meta name="keywords" content="Meteorological Service of Canada, climate, climate archive, past weather, historical weather temperature, snow, rain, wind, precipitation, Heating Degree Days, Cooling Degree Days, wind chill, humidex, relative humidity and visibility weather facts and trivia, historical climate data" />
+<meta name="dcterms.description" content="climate, past weather" />
+<meta name="dcterms.creator" content="Environment Canada" />
+<meta name="dcterms.subject" title="scheme" content="climate; past weather" />
+<title>Hourly Data Report for March 09, 1990</title>
+
+
+<meta name="dcterms.title" content="Hourly Data Report for March 09, 1990" />
+
+<meta name="dcterms.issued" title="W3CDTF" content="2011-10-31" />
+<meta name="dcterms.modified" title="W3CDTF" content="2015-09-22" />
+<meta name="dcterms.language" title="ISO639-2" content="eng" />
+
+<script src="../build/js/jquery.min.js"></script>
+<!--[if lte IE 8]>
+<script src="../build/js/polyfills/html5shiv-min.js"></script>
+<link rel="stylesheet" href="../build/grids/css/util-ie-min.css" />
+<link rel="stylesheet" href="../build/js/css/pe-ap-ie-min.css" />
+<link rel="stylesheet" href="../build/theme-gcwu-fegc/css/theme-ie-min.css" />
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<link rel="stylesheet" href="../build/grids/css/util-min.css" />
+<link rel="stylesheet" href="../build/js/css/pe-ap-min.css" />
+<link rel="stylesheet" href="../build/theme-gcwu-fegc/css/theme-min.css" />
+<!--<![endif]-->
+<link rel="stylesheet" href="../build/theme-gcwu-fegc/css/theme-ns-min.css" />
+
+<link rel="shortcut icon" href="/build31/theme-gcwu-fegc/images/favicon.ico" />
+<!-- CSSStart-->
+
+ 
+<!-- CSSEnd--> 
+
+
+<!-- CUSTOM TEMPLATE SCRIPTS/CSS BEGIN | DEBUT DES SCRIPTS/CSS DU GABARIT -->
+<!-- TEMPLATE SCRIPTS/CSS END | FIN DES SCRIPTS/CSS DU GABARIT -->
+<!-- CUSTOM SCRIPTS/CSS BEGIN | DEBUT DES SCRIPTS/CSS PERSONNALISES -->
+<link href="/assets/css/climate_clf3.css" media="screen,print" rel="stylesheet"/>
+<link href="/assets/css/expand_collapse.css" media="screen" rel="stylesheet"/>
+<!-- CUSTOM SCRIPTS/CSS END | FIN DES SCRIPTS/CSS PERSONNALISES -->
+<!-- TEMPLATE PRINT CSS BEGINS | DEBUT DU CSS DU GABARIT POUR L'IMPRESSION -->
+<!-- TEMPLATE PRINT CSS ENDS | FIN DU CSS DU GABARIT POUR L'IMPRESSION -->
+
+
+<script src="/vendor/js/jquery/jquery.collapse.min.js"></script>
+<script src="/assets/min/js/ajax-functions.min.js"></script>
+<script src="/assets/min/js/expandAllDetailsElements.min.js"></script>
+<script src="/assets/min/js/makeApplyInvisible.min.js"></script>
+<script type="text/javascript" src="/lib/constants-js.php?lang=En"></script>
+
+<script type="text/javascript">
+	//<![CDATA[
+		      function loadRTM() {
+        $('#rtm').hide();
+        $.ajax({
+          type: "GET",
+          url: "/lib/rtm_ajax.php",
+          dataType: "html",
+          data:"lang=En",
+          success: function(data) {
+            $('#rtm').fadeIn('slow');
+            $('#rtm').html(data);
+          },
+          error: onAJAXError
+        });
+      }
+
+	//]]>
+</script>
+
+</head>
+<body  onload="loadRTM();"><div id="wb-body"><div id="wb-skip">
+	<ul id="wb-tphp">
+		<li id="wb-skip1"><a href="#wb-cont">Skip to main content</a></li>
+		<li id="wb-skip2"><a href="#wb-nav">Skip to footer</a></li>
+	</ul>
+</div>
+
+<div id="wb-head"><div id="wb-head-in"><header><!-- HeaderStart -->
+<nav role="navigation"><div id="gcwu-gcnb"><h2>Government of Canada navigation bar</h2>
+	<div id="gcwu-gcnb-in">
+		<div id="gcwu-gcnb-fip">
+			<div id="gcwu-sig">
+				<div id="gcwu-sig-in">
+					<div id="gcwu-sig-eng" title="Government of Canada"><img src="/build31/theme-gcwu-fegc/images/sig-eng.gif" width="214" height="20" alt="Government of Canada" />
+					</div>
+				</div>
+			</div>
+			<ul>
+				<li id="gcwu-gcnb1"><a rel="external" href="http://www.canada.ca/en/index.html">Canada.ca</a></li>
+				<li id="gcwu-gcnb2"><a rel="external" href="http://www.servicecanada.gc.ca/eng/home.shtml">Services</a></li>
+				<li id="gcwu-gcnb3"><a rel="external" href="http://www.canada.ca/en/gov/dept/index.html">Departments</a></li>
+				<li id="gcwu-gcnb-lang"><a href="/lib/lang.php?url=%2FclimateData%2Fhourlydata_e.html%3Ftimeframe%3D1%26Prov%3DAB%26StationID%3D32232%26hlyRange%3D1990-03-07%257C2016-02-09%26Year%3D1990%26Month%3D3%26Day%3D9%26cmdB1%3DGo" lang="fr">Fran&ccedil;ais</a></li>
+			</ul>
+		</div>
+	</div>
+</div></nav>
+<div id="gcwu-bnr" role="banner"><div id="gcwu-bnr-in">
+<div id="gcwu-wmms"><div id="gcwu-wmms-in"><div id="gcwu-wmms-fip" title="Symbol of the Government of Canada"><img src="/build31/theme-gcwu-fegc/images/wmms.gif" width="126" height="30"  alt="Symbol of the Government of Canada" /></div></div></div>
+
+<div id="gcwu-title"><p id="gcwu-title-in"><a href="/">Climate</a></p></div>
+
+<section role="search"><div id="gcwu-srchbx"><h2>Search</h2>
+
+<form method="GET" action="/search/search_e.html">
+
+	<div id="gcwu-srchbx-in">
+		<label for="gcwu-srch">Search Web site</label>
+		<input type="text" maxlength="150" size="27" value="" name="gcwu-srch" id="gcwu-srch">
+		<input type="submit" value=Search name="gcwu-srch-submit" id="gcwu-srch-submit">
+	</div>
+</form>
+
+</div></section></div></div>
+
+<nav role="navigation"><div id="gcwu-psnb"><h2>Site navigation bar</h2><div id="gcwu-psnb-in"><div class="wet-boew-menubar mb-mega">
+	<div>
+		<ul class="mb-menu">
+			<li>
+				<section>
+					<h3>
+						<a href="/data_index_e.html">Data</a>
+					</h3>
+					<div class="mb-sm">
+<div class="span-5"> 
+<ul>
+                <li><a href="/index_e.html#access"><b>Historical Climate Data</b></a></li>
+                <li><a href="/advanceSearch/searchHistoricData_e.html"><b>Advanced Search</b></a>
+                    <ul class="list-bullet-none">
+				<li><a href="/advanceSearch/searchHistoricData_e.html#provinceTab">Search by Province </a></li>
+                         <li><a href="/advanceSearch/searchHistoricData_e.html#stnNameTab">Search by Station Name</a></li>
+                                <li>
+                                        <a href="/advanceSearch/searchHistoricData_e.html#proximityTab">Search by Proximity</a>
+                             </li>
+                        </ul>
+
+                 </li>
+
+
+                <li><a href="/climateData/almanacselection_e.html"><b>Almanac Averages & Extremes</b></a></li>
+ 
+
+                <li><a href="/prods_servs/cdn_climate_summary_e.html"><b>Monthly Climate Summaries</b></a></li>
+                <li><a href="/climate_normals/index_e.html"><b>Canadian Climate Normals</b></a></li>
+                <li><a href="/radar/index_e.html"><b>Historical Radar</b></a></li>
+                <li><a href="/prods_servs/engineering_e.html"><b>Engineering Climate Datasets</b></a>
+					<ul class="list-bullet-none">
+	                	<li>
+	                		<a href="ftp://client_climate@ftp.tor.ec.gc.ca/Pub/Engineering_Climate_Dataset/IDF/">Intensity-Duration-Frequency (IDF) files<span class="wb-invisible">IDF FTP Download</span></a>
+	                	</li>
+	                    <li>
+	                    	<a href="ftp://client_climate@ftp.tor.ec.gc.ca/Pub/Engineering_Climate_Dataset/Canadian_Weather_Energy_Engineering_Dataset_CWEEDS_2005/ZIPPED%20FILES/ENGLISH/">Canadian Weather Energy and Engineering Datasets (CWEEDS)<span class="wb-invisible">CERES FTP Download</span></a>
+	                    </li>
+	                    <li>
+	                    	<a href="ftp://client_climate@ftp.tor.ec.gc.ca/Pub/Engineering_Climate_Dataset/Canadian_Weather_year_for_Energy_Calculation_CWEC/ENGLISH/">Canadian Weather year for Energy Calculation (CWEC)<span class="wb-invisible">CWEC FTP Download</span></a>
+	                    </li>
+	                </ul>
+                </li>
+                
+                <li><a rel="external" href="http://www.ec.gc.ca/rhc-wsc/default.asp?lang=En&amp;n=4EED50F1-1"><b>Water Data</b></a></li>
+        </ul>
+</div>
+
+						<div class="clear"></div>
+						<div class="mb-main-link">
+							<a  href="/data_index_e.html">Data - Main Page</a>
+						</div>
+					</div>
+				</section>
+			</li>
+
+			<li>
+				<section>
+					<h3>
+						<a href="/about_the_data_index_e.html" >About the Data</a>
+					</h3>
+					<div class="mb-sm">
+<div class="span-5">
+	<ul>
+		<li><a href="/glossary_e.html"><b>Glossary</b> </a></li>
+                <li><a href="/prods_servs/documentation_index_e.html"><b>Technical Documentation</b></a></li>
+				<li><a href="/climate_normals/normals_documentation_e.html?docID=1981"><b>Calculation of the 1981 to 2010 Climate Normals for Canada</b></a></li>
+                <li><a href="/climate_normals/normals_documentation_e.html?docID=1971"><b>Calculation of the 1971 to 2000 Climate Normals for Canada</b></a></li>
+                <li><a href="/climate_normals/climate_info_1961_1990_e.html"><b>Calculation of the 1961 to 1990 Climate Normals for Canada</b></a></li>
+                <li><a href="/prods_servs/wmo_volumea_index_e.html"><b>WMO Volume A Report - Canada</b></a></li>
+                <li><a href="/FAQ_e.html"><b>Frequently Asked Questions</b></a></li>
+                <li><a href="/newPriceAnnounce_e.html"><b>Prices for Historical Climate Data</b></a></li>
+                <li><a href="/prods_servs/attachment1_e.html"><b>Data License Agreement</b></a></li>
+       </ul>
+</div>
+						<div class="clear"></div>
+						<div class="mb-main-link">
+							<a href="/about_the_data_index_e.html">About the Data - Main Page</a>
+						</div>
+					</div>
+				</section>
+			</li>
+
+			<li>
+				<section>
+					<h3>
+						<a href="/resources_index_e.html" >Resources</a>
+					</h3>
+					<div class="mb-sm">
+
+<div class="span-3">
+
+<ul>
+                <li>
+                <a href="/prods_servs/historical_publications_e.html"><b>Historical Publications</b></a>
+                </li>
+                <li>
+                <a href="/links/index_e.html"><b>Related Links and Resources</b></a>
+
+                <ul class="list-bullet-none">
+                <li><a href="/links/index_e.html#tools">Data Access Tools</a></li>
+                <li><a href="/links/index_e.html#maps">Cartographic Tools/Maps</a></li>
+                <li><a href="/links/index_e.html#climate">Climate Information/Summaries</a></li>
+                <li><a href="/links/index_e.html#general">General Links</a></li>
+                </ul>
+        </li>
+        </ul>
+</div>
+
+						<div class="clear"></div>
+						<div class="mb-main-link">
+							<a href="/resources_index_e.html">Resources - Main Page</a>
+						</div>
+					</div>
+				</section>
+			</li>
+		</ul>
+	</div>
+</div>
+
+</div></div>
+
+<div id="gcwu-bc"><h2>Breadcrumb trail</h2><div id="gcwu-bc-in">
+<ol>
+<li><a href="/index_e.html">Home</a></li><li><a href="/data_index_e.html">Data</a></li>
+
+</ol>
+</div></div></nav><!-- HeaderEnd -->
+</header></div></div>
+<div id="wb-core"><div id="wb-core-in" class="equalize"><div id="wb-main" role="main"><div id="wb-main-in">
+<!-- MainContentStart -->
+<h1 id="wb-cont" >Hourly Data Report for March 09, 1990</h1><div class="print-none"><div id="rtm-ec" class="expand-collapse print-none span-8">                <details class="notices"><summary class="notices"><span>Notices:</span></summary><div>
+
+                <hr/>
+                <p>The <a href="/archivedmessages_e.html">Notice Inventory</a> contains a record of all past and current Notices.</p>
+
+                <hr/>
+                <p>We'd like to hear from you! Please click <a href="/contactus/contact_us_e.html">Contact Us</a> to share your comments and suggestions.</p>                </div>              </details></div><div class="clear"> </div></div>
+            <!-- CONTENT BEGINS HERE | DEBUT DU CONTENU -->
+            <p>All times are specified in Local Standard Time (LST). Add 1 hour to adjust for Daylight Saving Time where and when it is observed.</p>
+<div class="clear"></div>
+
+<!-- <div class="span-2 row-start row-end width-20"></div> -->
+<div class="span-8">
+	            <table class="margin-bottom-none" style="width:98%;margin-left:1%;">
+              <caption class="print-none">
+            Metadata including Station Name, Province, Latitude, Longitude, Elevation, Climate ID, <abbr title="World Meteorological Organization">WMO</abbr> ID, <abbr title="Transport Canada">TC</abbr> ID
+              </caption>
+              <tbody>
+                <tr>
+                  <th colspan="6" class="boxColor margin-bottom-none"><b>
+            ABEE AGDM<br />
+            ALBERTA
+              </b>
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    <a href="http://climate.weather.gc.ca/glossary_e.html#latitude">Latitude</a>:
+                  </th>
+                  <td> 54<abbr title="degrees">&deg;</abbr>17<abbr title="minute">'</abbr>00.000<abbr title="second">&quot;</abbr> <abbr title="North">N</abbr></td>
+                  <th>
+                    <a href="http://climate.weather.gc.ca/glossary_e.html#longitude">Longitude</a>:
+                  </th>
+                  <td>112<abbr title="degrees">&deg;</abbr>58<abbr title="minute">'</abbr>00.000<abbr title="second">&quot;</abbr> <abbr title="West">W</abbr></td>
+                  <th>
+                    <a href="http://climate.weather.gc.ca/glossary_e.html#elevation">Elevation</a>:
+                  </th>
+                  <td>664.00 <abbr title="meter">m</abbr></td>
+                </tr>
+                <tr>
+                  <th>
+                    <a href="http://climate.weather.gc.ca/glossary_e.html#climate_ID">Climate ID</a>:
+                  </th>
+                  <td>3010010             </td>
+                  <th>
+                    <a href="http://climate.weather.gc.ca/glossary_e.html#wmo_id"><abbr title="World Meteorological Organization">WMO</abbr> ID</a>:
+                  </th>
+                  <td>71285               </td>
+                  <th>
+                    <a href="http://climate.weather.gc.ca/glossary_e.html#tc_ID"><abbr title="Transport Canada">TC</abbr> ID</a>:
+                  </th>
+                  <td>XAF                 </td>
+                </tr>
+              </tbody>
+            </table></div>
+<div class="clear"></div>
+
+<div class="span-8 margin-bottom-none print-none">
+	<div class="span-1"></div>
+	<div class="span-center" id="climateNav">
+		            <div class="module-menu-section span-2 align-center ">              <h3>Related Data</h3>            <ul>
+              <li>No related data is available for this station</li>            </ul>            </div>            <div class="module-menu-section span-2 align-center">              <h3>Additional Search Options</h3>            <ul>
+              <li><a href="http://climate.weather.gc.ca/advanceSearch/searchHistoricDataStations_e.html?timeframe=1&amp;Prov=AB&amp;StationID=32232&amp;hlyRange=1990-03-07%7C2016-02-09&amp;Year=1990&amp;Month=3&amp;Day=9&amp;cmdB1=Go&amp;searchType=stnProx&amp;txtRadius=25&amp;optProxType=navLink&amp;txtLatDecDeg=54.283333333333&amp;txtLongDecDeg=112.96666666667&amp;optLimit=specDate&amp;selRowPerPage=25&amp;station=ABEE+AGDM">Nearby Stations with Data</a></li>              <li><a href="http://climate.weather.gc.ca/advanceSearch/searchHistoricData_e.html?timeframe=1&amp;hlyRange=1990-03-07%7C2016-02-09&amp;Year=1990&amp;Month=3&amp;Day=9&amp;cmdB1=Go">Advanced Search <span class="wb-invisible">for March 9,1990</span> </a></li>            </ul>            </div>            <div class="module-menu-section span-2 margin-bottom-none align-center">              <h3>Download Data</h3>            <div class="span-2 border-top">
+            <div class="border-left">
+            <div class=" border-right">
+            <div class="span-2 border-bottom margin-bottom-none ">
+              <form method="get" action="http://climate.weather.gc.ca/climateData/bulkdata_e.html?timeframe=1&amp;Prov=AB&amp;StationID=32232&amp;hlyRange=1990-03-07%7C2016-02-09&amp;Year=1990&amp;Month=3&amp;Day=9&amp;cmdB1=Go">              <fieldset class="margin-bottom-medium" ><legend class="span-2 align-center downloadDataLegend margin-bottom-none">Hourly Data (March 1990)</legend><div><label for="bulkCsvLink" class="form-radio form-label-inline"><input class="deselect-off" checked="checked" type="radio" id="bulkCsvLink" value="csv" name="format" />&nbsp;<abbr title="Comma Seperated Values">CSV</abbr></label> &nbsp;&nbsp;<label for="bulkXmlLink" class="form-radio form-label-inline"><input class="deselect-off" type="radio" id="bulkXmlLink" name="format" value="xml" /><abbr title="Extensible Markup Language">&nbsp;XML</abbr></label></div></fieldset><input class="wb-invisible position-top" type="hidden" name="stationID" value="32232" /><input class="wb-invisible position-top" type="hidden" name="Year" value="1990" /><input class="wb-invisible position-top" type="hidden" name="Month" value="3" /><input class="wb-invisible position-top" type="hidden" name="Day" value="9" /><input class="wb-invisible position-top" type="hidden" name="timeframe" value="1" /><div><input class="button align-center indent-xlarge margin-top-medium" type="submit" name="submit" value="Download Data" /></div><a href="ftp://client_climate@ftp.tor.ec.gc.ca/Pub/Get_More_Data_Plus_de_donnees/">Get More Data</a></form>            </div>
+            </div>
+            </div>
+            </div>
+            </div>	</div>
+</div>
+<div class="clear"></div>
+
+<div class="span-8 margin-bottom-none print-none">
+			<!--if no data, don't display dropdowns-->
+						<script src="/assets/min/js/dateNavigation.min.js"></script>
+          <form id="frmDateNav1" action="#">
+          	<script type="text/javascript">
+							$("#frmDateNav1").submit (
+								function() {
+									if ( "function" === typeof ( loadDataTable ) ) {
+										loadDataTable ( $("#Year1").val(), $("#Month1").val(), $("#Day1").val() );
+									};
+									showHideNav ( $("#Year1").val(), $("#Month1").val(), $("#Day1").val() );
+									if (typeof loadNavTable == 'function') {
+										loadNavTable( $("#Year1").val(), $("#Month1").val(), $("#Day1").val());
+									};
+								}
+							);
+						</script>            <script type="text/javascript">$(document).ready(function() { setMinMaxDates(1990,03,07,2016,02,09); setMaxDatesDrop(2016,02,09); showHideNav(1990, 03, 09, 3); })</script>
+            <script type="text/javascript">var navBars = new Array();</script>
+<script type="text/javascript">navBars.push(document.forms.namedItem('frmDateNav1'));</script>
+<fieldset class="margin-bottom-none">
+<legend class="wb-invisible">Date Navigation</legend>
+                <input type="hidden" value="1" name="timeframe" />
+                <input type="hidden" value="AB" name="Prov" />
+                <input type="hidden" value="32232" name="StationID" />
+                <input type="hidden" value="1990-03-07|2016-02-09" name="hlyRange" />
+                <input type="hidden" value="Go" name="cmdB1" />
+<div id="nav-prev1" class="span-2 row-start"><span class="wrap-none" id="prevLink1">
+<a href="/climateData/hourlydata_e.html?timeframe=1&amp;Prov=AB&amp;StationID=32232&amp;hlyRange=1990-03-07%7C2016-02-09&amp;Year=1990&amp;Month=3&amp;Day=8&amp;cmdB1=Go" onclick="javascript: moveDate(0,0,-1);"><span class="wb-icon-nav-180-alt"></span>Previous Day</a>
+</span></div>
+<div class="span-4 align-center"><label for="Year1" class="wb-invisible position-top">Year</label><select name="Year" id="Year1" size="1" class="display-inline align-center" onchange="javascript:yearChange(document.forms.namedItem('frmDateNav1')); javascript:updateDays(document.forms.namedItem('frmDateNav1'));">
+<option value="1990" selected="selected">1990</option>
+<option value="1991">1991</option>
+<option value="1992">1992</option>
+<option value="1993">1993</option>
+<option value="1994">1994</option>
+<option value="1995">1995</option>
+<option value="1996">1996</option>
+<option value="1997">1997</option>
+<option value="1998">1998</option>
+<option value="1999">1999</option>
+<option value="2000">2000</option>
+<option value="2001">2001</option>
+<option value="2002">2002</option>
+<option value="2003">2003</option>
+<option value="2004">2004</option>
+<option value="2005">2005</option>
+<option value="2006">2006</option>
+<option value="2007">2007</option>
+<option value="2008">2008</option>
+<option value="2009">2009</option>
+<option value="2010">2010</option>
+<option value="2011">2011</option>
+<option value="2012">2012</option>
+<option value="2013">2013</option>
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+</select>
+<label for="Month1" class="wb-invisible position-top">Month</label><select name="Month" id="Month1" size="1" class="display-inline " onchange="javascript:updateDays(document.forms.namedItem('frmDateNav1'));javascript:yearChange(document.forms.namedItem('frmDateNav1'));">
+                      <option value="3" selected="selected">March</option>
+                      <option value="4">April</option>
+                      <option value="5">May</option>
+                      <option value="6">June</option>
+                      <option value="7">July</option>
+                      <option value="8">August</option>
+                      <option value="9">September</option>
+                      <option value="10">October</option>
+                      <option value="11">November</option>
+                      <option value="12">December</option>
+</select>
+<label for="Day1" class="wb-invisible position-top">Day</label><select name="Day" id="Day1" size="1" class="display-inline" onchange="javascript:yearChange(document.forms.namedItem('frmDateNav1'));">
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9" selected="selected">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                      <option value="18">18</option>
+                      <option value="19">19</option>
+                      <option value="20">20</option>
+                      <option value="21">21</option>
+                      <option value="22">22</option>
+                      <option value="23">23</option>
+                      <option value="24">24</option>
+                      <option value="25">25</option>
+                      <option value="26">26</option>
+                      <option value="27">27</option>
+                      <option value="28">28</option>
+                      <option value="29">29</option>
+                      <option value="30">30</option>
+                      <option value="31">31</option>
+</select>
+<input name="cmdB1" value="Go" class="align-bottom button display-inline" type="submit" />
+</div><div id="nav-next1" class="span-2 align-right row-end"><span class="wrap-none" id="nextLink1">
+                    <a href="/climateData/hourlydata_e.html?timeframe=1&amp;Prov=AB&amp;StationID=32232&amp;hlyRange=1990-03-07%7C2016-02-09&amp;Year=1990&amp;Month=3&amp;Day=10&amp;cmdB1=Go" onclick="javascript: moveDate(0,0,1);"><span class="margin-right-small">Next Day</span><span class="wb-icon-nav-alt indent-small margin-right-none"></span></a>
+                  </span>
+</div></fieldset>
+</form>
+</div>
+<div class="clear"></div>
+
+<div class="span-8">
+	<div id="dynamicDataTable" style="position:static;">
+		<div class="span-2"></div>
+<div class="span-4">
+<table  class="indent-xlarge">
+  <caption>Hourly Data Report for March 9, 1990</caption>
+  <tbody>
+    <tr class="table-odd">
+      <td>        <p>We're sorry we were unable to satisfy your request.</p>
+        <p>The data is either missing, invalid, or subject to review.</p>
+        <p>As an alternative,</p>        <ul class="discList">          <li>Hourly data between <a href="http://climate.weather.gc.ca/climateData/hourlydata_e.html?timeframe=1&amp;Prov=AB&amp;StationID=32232&amp;hlyRange=1990-03-07%7C2016-02-09&amp;Year=1990&amp;Month=3&amp;Day=7&amp;cmdB1=Go">March 07 1990</a> and <a href="http://climate.weather.gc.ca/climateData/hourlydata_e.html?timeframe=1&amp;Prov=AB&amp;StationID=32232&amp;hlyRange=1990-03-07%7C2016-02-09&amp;Year=2016&amp;Month=2&amp;Day=9&amp;cmdB1=Go">February 09 2016</a></li>
+          <li>Daily data between <a href="http://climate.weather.gc.ca/climateData/dailydata_e.html?timeframe=2&amp;Prov=AB&amp;StationID=32232&amp;hlyRange=1990-03-07%7C2016-02-09&amp;Year=2002&amp;Month=11&amp;Day=1&amp;cmdB1=Go">November 2002</a> and <a href="http://climate.weather.gc.ca/climateData/dailydata_e.html?timeframe=2&amp;Prov=AB&amp;StationID=32232&amp;hlyRange=1990-03-07%7C2016-02-09&amp;Year=2016&amp;Month=2&amp;Day=9&amp;cmdB1=Go">February 2016</a></li>
+          <li>Monthly data between <a href="http://climate.weather.gc.ca/climateData/monthlydata_e.html?timeframe=3&amp;Prov=AB&amp;StationID=32232&amp;hlyRange=1990-03-07%7C2016-02-09&amp;Year=2002&amp;Month=11&amp;Day=1&amp;cmdB1=Go">2002</a> and <a href="http://climate.weather.gc.ca/climateData/monthlydata_e.html?timeframe=3&amp;Prov=AB&amp;StationID=32232&amp;hlyRange=1990-03-07%7C2016-02-09&amp;Year=2007&amp;Month=11&amp;Day=1&amp;cmdB1=Go">2007</a></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>	</div>
+</div>
+<div class="clear"></div>
+
+<div class="span-8 margin-bottom-none print-none">
+			<!--if no data, don't display dropdowns-->
+						<script src="/assets/min/js/dateNavigation.min.js"></script>
+          <form id="frmDateNav2" action="#">
+          	<script type="text/javascript">
+							$("#frmDateNav2").submit (
+								function() {
+									if ( "function" === typeof ( loadDataTable ) ) {
+										loadDataTable ( $("#Year2").val(), $("#Month2").val(), $("#Day2").val() );
+									};
+									showHideNav ( $("#Year2").val(), $("#Month2").val(), $("#Day2").val() );
+									if (typeof loadNavTable == 'function') {
+										loadNavTable( $("#Year2").val(), $("#Month2").val(), $("#Day2").val());
+									};
+								}
+							);
+						</script><script type="text/javascript">navBars.push(document.forms.namedItem('frmDateNav2'));</script>
+<fieldset class="margin-bottom-none">
+<legend class="wb-invisible">Date Navigation</legend>
+                <input type="hidden" value="1" name="timeframe" />
+                <input type="hidden" value="AB" name="Prov" />
+                <input type="hidden" value="32232" name="StationID" />
+                <input type="hidden" value="1990-03-07|2016-02-09" name="hlyRange" />
+                <input type="hidden" value="Go" name="cmdB1" />
+<div id="nav-prev2" class="span-2 row-start"><span class="wrap-none" id="prevLink2">
+<a href="/climateData/hourlydata_e.html?timeframe=1&amp;Prov=AB&amp;StationID=32232&amp;hlyRange=1990-03-07%7C2016-02-09&amp;Year=1990&amp;Month=3&amp;Day=8&amp;cmdB1=Go" onclick="javascript: moveDate(0,0,-1);"><span class="wb-icon-nav-180-alt"></span>Previous Day</a>
+</span></div>
+<div class="span-4 align-center"><label for="Year2" class="wb-invisible position-top">Year</label><select name="Year" id="Year2" size="1" class="display-inline align-center" onchange="javascript:yearChange(document.forms.namedItem('frmDateNav2')); javascript:updateDays(document.forms.namedItem('frmDateNav2'));">
+<option value="1990" selected="selected">1990</option>
+<option value="1991">1991</option>
+<option value="1992">1992</option>
+<option value="1993">1993</option>
+<option value="1994">1994</option>
+<option value="1995">1995</option>
+<option value="1996">1996</option>
+<option value="1997">1997</option>
+<option value="1998">1998</option>
+<option value="1999">1999</option>
+<option value="2000">2000</option>
+<option value="2001">2001</option>
+<option value="2002">2002</option>
+<option value="2003">2003</option>
+<option value="2004">2004</option>
+<option value="2005">2005</option>
+<option value="2006">2006</option>
+<option value="2007">2007</option>
+<option value="2008">2008</option>
+<option value="2009">2009</option>
+<option value="2010">2010</option>
+<option value="2011">2011</option>
+<option value="2012">2012</option>
+<option value="2013">2013</option>
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+<option value="2016">2016</option>
+</select>
+<label for="Month2" class="wb-invisible position-top">Month</label><select name="Month" id="Month2" size="1" class="display-inline " onchange="javascript:updateDays(document.forms.namedItem('frmDateNav2'));javascript:yearChange(document.forms.namedItem('frmDateNav2'));">
+                      <option value="3" selected="selected">March</option>
+                      <option value="4">April</option>
+                      <option value="5">May</option>
+                      <option value="6">June</option>
+                      <option value="7">July</option>
+                      <option value="8">August</option>
+                      <option value="9">September</option>
+                      <option value="10">October</option>
+                      <option value="11">November</option>
+                      <option value="12">December</option>
+</select>
+<label for="Day2" class="wb-invisible position-top">Day</label><select name="Day" id="Day2" size="1" class="display-inline" onchange="javascript:yearChange(document.forms.namedItem('frmDateNav2'));">
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9" selected="selected">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                      <option value="18">18</option>
+                      <option value="19">19</option>
+                      <option value="20">20</option>
+                      <option value="21">21</option>
+                      <option value="22">22</option>
+                      <option value="23">23</option>
+                      <option value="24">24</option>
+                      <option value="25">25</option>
+                      <option value="26">26</option>
+                      <option value="27">27</option>
+                      <option value="28">28</option>
+                      <option value="29">29</option>
+                      <option value="30">30</option>
+                      <option value="31">31</option>
+</select>
+<input name="cmdB2" value="Go" class="align-bottom button display-inline" type="submit" />
+</div><div id="nav-next2" class="span-2 align-right row-end"><span class="wrap-none" id="nextLink2">
+                    <a href="/climateData/hourlydata_e.html?timeframe=1&amp;Prov=AB&amp;StationID=32232&amp;hlyRange=1990-03-07%7C2016-02-09&amp;Year=1990&amp;Month=3&amp;Day=10&amp;cmdB1=Go" onclick="javascript: moveDate(0,0,1);"><span class="margin-right-small">Next Day</span><span class="wb-icon-nav-alt indent-small margin-right-none"></span></a>
+                  </span>
+</div></fieldset>
+</form>
+</div>
+<div class="clear"></div>
+
+<div class="span-8 margin-bottom-none">
+	<p>
+    	<em>
+			<b>
+				Notes on <a href="dataQuality_e.html">Data Quality</a>.
+			</b>
+		</em>
+	</p>
+</div>
+<div class="clear"></div>
+
+<div class="span-8">
+	<div class="span-1"></div>
+	            <div class="span-6 border-all">            	<div class="span-6 margin-bottom-none align-center boxColor"><b>Legend</b></div>            	<div class="span-3 width-40 indent-xlarge">             <ul>              <li id="legendE" class="margin-bottom-medium">E = Estimated</li>
+              <li id="legendM" class="margin-bottom-medium">M = Missing</li>
+             </ul>            	</div>            	<div class="span-3">             <ul class="float-left">              <li id="legendNA" class="margin-bottom-medium">NA = Not Available</li>
+              <li id="legend&Dagger;" class="margin-bottom-medium">&Dagger; = Partner data that is not subject to review by the National Climate Archives</li>
+             </ul>            	</div>             </div>
+</div>
+
+            <!-- CONTENT ENDS | FIN DU CONTENU -->
+            <!-- THREE COLUMN LAYOUT ENDS | FIN DE LA MISE EN PAGE DE TROIS COLONNES -->
+
+            <!-- FOOTER BEGINS | DEBUT DU PIED DE LA PAGE -->
+<!-- Date Modified begins / Début de la date de modification -->
+<dl id="gcwu-date-mod" role="contentinfo">
+<dt>Date modified:</dt><dd><span><time>2015-09-22</time></span></dd>
+</dl>
+<div class="clear"></div>
+<!-- Date Modified ends / Fin de la date de modification -->
+<!-- MainContentEnd -->
+
+</div></div></div> </div>
+
+<div id="wb-foot"><div id="wb-foot-in"><footer>	<h2 id="wb-nav">Footer</h2>
+<!-- FooterStart -->
+	
+<nav role="navigation"><div id="gcwu-sft"><h3>Site footer</h3><div id="gcwu-sft-in">
+<div id="gcwu-tctr">
+<ul>
+<li class="gcwu-tc"><a href="http://weather.gc.ca/mainmenu/disclaimer_e.html" rel="license">Terms and conditions</a></li>
+<li class="gcwu-tr"><a href="http://www.ec.gc.ca/default.asp?lang=En&amp;n=390AF41B-1">Transparency</a></li>
+</ul>
+</div>
+<div class="clear"></div>
+<section><div class="span-2"><h4 class="col-head"><a href="http://ec.gc.ca/meteo-weather/default.asp?lang=En&amp;n=FDF98F96-1">About us</a></h4>
+<ul>
+<li><a href="http://www.ec.gc.ca/default.asp?lang=En&amp;n=BD3CE17D-1">Our Mandate</a></li>
+<li><a href="http://www.ec.gc.ca/default.asp?lang=En&amp;n=B6832638-1">Our Minister</a></li>
+<li><a href="/sitemap_e.html">Site Map</a></li>
+</ul></div></section>
+<section><div class="span-6"><h4 class="col-head"><a href="/contactus/contact_us_e.html">Contact us</a></h4>
+<address>
+<ul>
+<li><a href="/contactus/contact_us_e.html#address">Addresses</a></li>
+<li><a href="/contactus/contact_us_e.html#emails">Email</a></li>
+</ul>
+</address></div></section>
+</div></div></nav>
+<nav role="navigation"><div id="gcwu-gcft"><h3>Government of Canada footer</h3><div id="gcwu-gcft-in"><div id="gcwu-gcft-fip">
+<ul>
+<li><a rel="external" href="http://healthycanadians.gc.ca/index-eng.php"><span>Health</span></a></li>
+<li><a rel="external" href="http://www.travel.gc.ca/index-eng.asp"><span>Travel</span></a></li>
+<li><a rel="external" href="http://www.servicecanada.gc.ca/eng/home.shtml"><span>Service Canada</span></a></li>
+<li><a rel="external" href="http://www.jobbank.gc.ca/intro-eng.aspx"><span>Jobs</span></a></li>
+<li><a rel="external" href="http://actionplan.gc.ca/en"><span>Economy</span></a></li>
+<li id="gcwu-gcft-ca"><div><a rel="external" href="http://www.canada.ca/en/index.html">Canada.ca</a></div></li>
+</ul>
+</div></div></div></nav><!-- FooterEnd -->
+</footer></div></div>
+</div> <!-- End of wb-body --> <script src="../build/theme-gcwu-fegc/js/theme-min.js"></script>
+<script src="../build/js/settings.js"></script>
+<script src="../build/js/pe-ap-min.js"></script>		<!-- FOOTER ENDS | FIN DU PIED DE LA PAGE -->
+</body>
+</html>
