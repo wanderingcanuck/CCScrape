@@ -64,5 +64,13 @@ def stationInfo():
         data.close()
     return station_name, station_id
     
+def GUI_test(station_name, dirname):
+    data = shelve.open('climate_database.dat')
+    station_name = str(station_name)
+    if checkStationName(station_name, data):
+        return station_name, getStationId(station_name, data)
+    else:
+        exit(0)
+    
 if __name__ == '__main__': stationInfo()
 
