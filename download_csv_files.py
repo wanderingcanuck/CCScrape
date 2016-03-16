@@ -3,61 +3,16 @@ import call_climate_canada
 from climate_parsing import get_years, get_years_cleanup, get_months_cleanup
 import logging
 import os
-import pickle
-
-"""
-Open pickle file containing all (as of January) names of Stations
-and the Station ID's associated with them.
-
-('BEAVERLODGE REDLOW', '2659'),
-('BEAVERTON', '4411'),
-('BECANCOUR', '5316'),
-('BECHARD', '2849'),
-('BECHER BAY', '19'),
-('BEDE', '3464'),
-('BEDFORD', '6302'),
-('BEDFORD BASIN', '43406'),
-('BEDFORD MWO', '26824'),
-('BEDFORD RANGE', '43123'),
-('BEECHWOOD', '6116'),
-('BEECHY', '3071'),
-
-"""
-
-with open('list_of_stations.pickle', 'rb') as f:
-    list_of_stations = pickle.load(f)
-
+import check_station_info as station_info
     
 logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(levelname)s - %(message)s')
 
 logging.debug('Start Of Program')
 
-"""
-Enter the Station Name, used for the name to save the CSV files
-under.
-"""
-station_name = raw_input("Enter station name here (names are CAPITALIZED):\n>")
-
-"""
-Enter the Station ID ('BEDFORD', '6302'). Used as the main parameter
-for creating the CGI links to the Stations webpage.
-"""
-station_id = raw_input("Enter station ID here:\n>")
-
-"""
-# Was used for retrieving the Station ID when given a Station Name.
-# Complications arise because there can be more than one Station Name
-# of the same Name. Hence changing the program to require the Station ID.
-for num in range(len(list_of_stations)):    
-    if list_of_stations[num][0] == station_name:
-        print 'Found it!', list_of_stations[num][1]
-        station_id = list_of_stations[num][1]
-        break
-    else:
-        continue
-"""     
-if station_id == "":
-    print """Station ID was not entered. This is a requirement to proceed.\n
+station_name, station_id = station_info.stationInfo()
+ 
+if not station_id or not station_name:
+    print """Station Name or Station ID was not entered. This is a requirement to proceed.\n
     Please note that the CLIMATE ID is not the same as the STATION ID."""
     print "Please run the program again."
     print "Now EXITTING."
@@ -72,7 +27,6 @@ timeframe_urls = {
                     'hourly_url':'http://climate.weather.gc.ca/climateData/hourlydata_e.html?timeframe=1&StationID=' + station_id
                   }
 
-                  
 """
 Creates an Instance for each timeframe ('monthly_url, daily_url, hourly_url').
 Could be removed and added to the corresponding download functions.
