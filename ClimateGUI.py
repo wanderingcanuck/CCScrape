@@ -57,24 +57,35 @@ class MainWindow(wx.Frame):
         
     def onGo(self, e):
     
-        self.test_case()
-    
-        # station_name = str(self.stat_txt_field.GetValue())
-        # station_ids = ClimateGUIcheck.checkStationName(station_name)
+        station_name, station_ids = self.check_valid_name()
 
-        # if station_ids:
-            # if len(station_ids) > 1:
-                # self.dlg_test(station_name, station_ids)
-            # elif len(station_ids) == 1: 
-                # print "Just one Station Id"
-            # else: 
-                # print "Something went wrong at onGo"
-        # else: 
-            # print "Station ID not found."
+        if station_ids:
+            if len(station_ids) > 1:
+                self.multipleStations(station_name, station_ids)
+            elif len(station_ids) == 1: 
+                print "Just one Station Id"
+            else: 
+                print "Something went wrong at onGo"
+        else: 
+            print "Station ID not found."
 
         
-    def dlg_test(self, station_name, station_ids):
-             
+        # self.test_case()
+    
+            
+    def check_valid_name(self):
+        station_name = str(self.stat_txt_field.GetValue())
+        return station_name, ClimateGUIcheck.checkStationName(station_name)
+        
+        
+    def multipleStations(self, station_name, station_ids):
+    
+        db = shelve.open("climate_data.dat", 'r')
+        
+        db_list = db.get(station_name)
+        
+        print db_list
+
         # Dialog Window for selecting Station Name from list of Stations with same name.
         dlg = wx.Dialog(self.panel, -1, "Choose Station From List", size=(400, 300))
         
@@ -85,7 +96,25 @@ class MainWindow(wx.Frame):
         self.dlg_text = wx.StaticText(dlg, -1, "There are multiple stations by the name of {}.\nPlease select the Weather Station from the list below.".format(station_name))   
         self.placeholder = wx.StaticText(dlg, -1, "PlaceHolder Text")
         
-        self.placeholder2 = wx.ListBox(dlg, -1, choices=station_ids, style=wx.LB_SINGLE)
+        self.dlg_list = wx.ListCtrl(dlg, -1, style=wx.LC_REPORT)
+        
+        self.dlg_list.InsertColumn(0, "Station")
+        self.dlg_list.InsertColumn(1, "Hourly")
+        self.dlg_list.InsertColumn(2, "Daily")
+        self.dlg_list.InsertColumn(3, "Monthly")
+        self.dlg_list.InsertColumn(4, "Station ID")
+        self.dlg_list.InsertColumn(5, "Province")
+
+        for num in range(len(db_list)):
+            value = db_list[num]
+            self.dlg_list.InsertStringItem(num, station_name)
+            hly, dly, mly, stat_id, prov = value
+
+            self.dlg_list.SetStringItem(num, 1, hly)
+            self.dlg_list.SetStringItem(num, 2, dly)
+            self.dlg_list.SetStringItem(num, 3, mly)
+            self.dlg_list.SetStringItem(num, 4, stat_id)
+            self.dlg_list.SetStringItem(num, 5, prov)          
         
         self.buttonbox = wx.BoxSizer(wx.HORIZONTAL)
         self.dlg_OK = wx.Button(dlg, wx.ID_OK)
@@ -95,9 +124,9 @@ class MainWindow(wx.Frame):
         self.buttonbox.Add(self.dlg_Cancel, 0, wx.ALL, 5)
         
         self.topbox.AddMany([
-                           (self.dlg_text, 1, wx.ALL|wx.ALIGN_RIGHT, 10),
+                           (self.dlg_text, 1, wx.ALL|wx.ALIGN_CENTER, 10),
                            (self.placeholder, 1, wx.ALL|wx.ALIGN_CENTER, 5),                           
-                           (self.placeholder2, 1, wx.ALL|wx.ALIGN_CENTER, 5),                           
+                           (self.dlg_list, 2, wx.ALL|wx.ALIGN_CENTER, 5),                           
                            (self.buttonbox, 1, wx.ALL|wx.ALIGN_CENTER, 5),
                            ])
         
@@ -110,11 +139,15 @@ class MainWindow(wx.Frame):
         if dlg.ShowModal() == wx.ID_OK:
             print 'Hello'
             
+        dlg.Centre()
+            
         dlg.Destroy()
+        
+        db.close()
         
     def test_case(self):
     
-        db = shelve.open("climate_database.dat", 'r')
+        db = shelve.open("climate_data.dat", 'r')
         
         db_list = db.items()
     
@@ -127,29 +160,26 @@ class MainWindow(wx.Frame):
         # Creation of Window Objects, and adding them to the Dialog Window
         self.dlg_text = wx.StaticText(dlg, -1, "Testing")   
         
-        lst = ['cat', 'dog', 'man', 'bat', 'bear']
-        
         self.dlg_list = wx.ListCtrl(dlg, -1, style=wx.LC_REPORT)
         
         self.dlg_list.InsertColumn(0, "Station")
-        self.dlg_list.InsertColumn(1, "ID")
-        self.dlg_list.InsertColumn(2, "ID2")
-        self.dlg_list.InsertColumn(3, "ID3")
-        self.dlg_list.InsertColumn(4, "ID4")
-        self.dlg_list.InsertColumn(5, "ID5")
-        self.dlg_list.InsertColumn(6, "ID6")
-        
+        self.dlg_list.InsertColumn(1, "Hourly")
+        self.dlg_list.InsertColumn(2, "Daily")
+        self.dlg_list.InsertColumn(3, "Monthly")
+        self.dlg_list.InsertColumn(4, "Station ID")
+        self.dlg_list.InsertColumn(5, "Province")
+
         for num in range(len(db_list)):
             key, value = db_list[num]
                     
             self.dlg_list.InsertStringItem(num, key)
-            if len(value) > 1:
-                for num1 in range(len(value)):
-                    self.dlg_list.SetStringItem(num, num1 + 1, value[num1])
-                    
-            self.dlg_list.SetStringItem(num, 1, value[0])
+            hly, dly, mly, stat_id, prov = value[0]
 
-        
+            self.dlg_list.SetStringItem(num, 1, hly)
+            self.dlg_list.SetStringItem(num, 2, dly)
+            self.dlg_list.SetStringItem(num, 3, mly)
+            self.dlg_list.SetStringItem(num, 4, stat_id)
+            self.dlg_list.SetStringItem(num, 5, prov)  
             
         self.topbox.AddMany([
                            (self.dlg_text, 1, wx.ALL|wx.ALIGN_CENTER, 5),

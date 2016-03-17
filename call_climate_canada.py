@@ -4,8 +4,19 @@ import climate_parsing
 import shelve
 
 class CallClimateCanada(): # handles the changing of links, calling of webpages, etc.
-
+        """
+        This Class deals with the interaction between climate.weather.gc.ca
+        and the client.
+        
+        More specifically, it allows the search, download, and saving of
+        a snapshot of the current number, names, ids, and operating dates
+        of all the weather stations listed on the website.
+        """
         def __init__(self, page_link):
+            """
+            Initialised, client provides a link to search through listings.
+            Links webpage search field must be set to '100 entries per page'.
+            """
             self.page_link = page_link
             self.station_name_and_prov = []
             self.station_id = []
@@ -15,7 +26,10 @@ class CallClimateCanada(): # handles the changing of links, calling of webpages,
 
         
         def get_html(self, link):
-        
+            """
+            Open connection to website.
+            Return HTML as self.page_html
+            """
             try:
                 print "Opening link"
                 print "{}" .format(link)
@@ -30,7 +44,13 @@ class CallClimateCanada(): # handles the changing of links, calling of webpages,
 
         
         def get_search_page_info(self, html):
-
+            """
+            Parses each website using the functions id climate_parsing.py
+            Starts with all Station Names and Province on the page,
+            followed by the Station ID,
+            followed by extra data (hourly range, daily range, monthly range).
+            Append the respective initialised lists with the data.
+            """
             station_name = climate_parsing.get_station_name_and_prov(html)
             print "Parsing Station Name"
             station_id_number = climate_parsing.get_station_id(html)
@@ -93,14 +113,21 @@ class CallClimateCanada(): # handles the changing of links, calling of webpages,
             # print len(new_list)
 
         def call_websites(self):
-        
+            """
+            
+            """
             """
             The website seems to double up on the last entry starting with the second page.
             Will need to clean list up afterwards.
             """
             
+            new_file = open('climate_canada_log.txt', 'w') 
+            
             first_html_page = self.get_html(self.page_link)
             self.list_of_page_numbers = climate_parsing.get_number_of_pages(first_html_page)
+            for item in self.list_of_page_numbers:
+                new_file.write(str(item))
+
             self.get_search_page_info(first_html_page)
 
             if len(self.list_of_page_numbers) > 0:
@@ -118,14 +145,10 @@ class CallClimateCanada(): # handles the changing of links, calling of webpages,
             # Test code for separating the Station Name from the Province for zipping
             
             self.station_name = [item[0] for item in self.station_name_and_prov]
-                       
+            print len(self.station_name), len(self.extra_data)
             new_list = zip(self.station_name, self.extra_data)
-                       
-            
-                       
+                                  
             with open('test_the_climate.txt', 'w') as f:
-                
-                
                 
                 print "Zipping Files"
                 for item in new_list:
@@ -133,6 +156,7 @@ class CallClimateCanada(): # handles the changing of links, calling of webpages,
                     f.write(str(item) + '\n' )
                     
             self.data_file.close()
+            new_file.close()
             print "FINISHED! ALL DONE"
             print len(new_list)
 
