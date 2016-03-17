@@ -31,7 +31,6 @@ def get_number_of_pages(page_html):
     for mult_of_100 in range(2, total_stations + 1):
         if (mult_of_100 - 1) % 100 < 1:
             list_of_page_numbers.append(mult_of_100)
-                    
     return list_of_page_numbers
     
 def get_years(page_html):
